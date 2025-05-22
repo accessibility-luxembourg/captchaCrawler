@@ -1,0 +1,5 @@
+bin
+lib
+pyvenv.cfg
+scrapy.log
+captchas.jsonl
