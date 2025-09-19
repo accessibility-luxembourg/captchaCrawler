@@ -6,5 +6,7 @@ gnutimeout() {
         timeout "$@"
     fi
 }
-cat list-sites.txt | while read i; do echo $i; gnutimeout -s KILL 1h scrapy runspider --logfile=scrapy.log captcha_spider.py -a url=https://$i; done
+cat list-sites.txt | while read i; do 
+    gnutimeout -s KILL 1h scrapy runspider --logfile=scrapy.log captcha_spider.py -a url=https://$i
+done
 
